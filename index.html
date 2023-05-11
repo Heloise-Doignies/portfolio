@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/8e5b8c7544.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/png" sizes="32x32" href="images-accueil/favicon.png">
+        <title>Héloïse Doignies - CV et Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel&family=Playfair+Display&family=Qwitcher+Grypen&display=swap" rel="stylesheet">
+        <!-- Test carousel -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+        <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    </head>
+
+    <body>
+        <header>
+            <!-- <img id="image-header" src="/visuels/sea-header.png" alt="vague mer en dark"> -->
+            <div id="texte-header">
+                <div class="identite">
+                    <div class="prenom">Héloïse</div>
+                    <div class="nom">Doignies</div>
+                </div>
+                <div class="metier">
+                    <img id="image-boule" src="/visuels/boule.png" alt="boule voyance">
+                    <div class="texte-metier">Développeuse - <br>conceptrice <br>logiciel junior</div>
+                </div>
+            </div>
+        </header>
+
+        <section class="section1">
+            <div class="bloc-presentation">
+                <div class="titre-cadre">Qui suis-je ?</div>
+                <div class="presentation">J'ai découvert le monde du code en travaillant sur une plateforme numérique participative avec un développeur web lors de ma dernière expérience professionnelle dans une agence de concertation. 
+                    J'analysais l'expérience des utilisateurs et proposais des évolutions pour répondre au mieux aux enjeux des projets participatifs. 
+                    <br>Curieuse de mieux comprendre l'aspect technique de cet outil, j'ai commencé à apprendre le développement web en autonomie avant de me tourner vers les Descodeuses pour évoluer professionnellement. 
+                    <br>Dans le cadre de cette formation de conceptrice et développeuse d'applications, je suis à la recherche d'un stage de six mois à partir de septembre 2023.
+                </div>
+            </div>
+
+            <div class="cartes">
+                <div class="carte carte1">
+                    <div class="zone-qui recto-qui1"></div>
+                    <div class="zone-qui verso-qui1" id="carte1-contenu">
+                        <div>
+                            <div class="sous-titre">Contact</div>
+                            <div class="texte"><a class="mail" href="mailto:heloise.dgn@gmail.com">heloise.dgn@gmail.com</a>
+                                <br>06 35 49 11 13
+                                <br> 
+                                <br>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="sous-titre">Réseaux</div>
+                            <div class="texte">
+                                <a href="https://www.linkedin.com/in/heloise-doignies/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/Heloise-Doignies" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <div class="qui-bouton"><a href="/visuels/CV-HeloiseDoignies.pdf" target="_blank">Télécharger mon CV</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carte carte2">
+                    <div class="zone-qui recto-qui2"></div>
+                    <div class="zone-qui verso-qui2" id="carte2-contenu">
+                        <div class="photo"><img src="/visuels/photoperso2.png" alt="photo Héloïse"></div>
+                        <div class="sous-titre">Loisirs</div>
+                        <div class="texte">Contes - théâtre 
+                            <br>Loisirs créatifs (écriture, dessin, peinture, collage, broderie) 
+                            <br>Marche (randonnées en nature) </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section2">
+            <div class="titre-sanscadre">Expériences</div>
+            
+            <div id="ligne"><div class="parcours">
+                <div id="experience1" class="zone-experience">
+                    <div class="zone-image"><img id="exp-image1" class="cercle-parcours" src="/visuels/exp1.png" alt="cercle tarot" onmouseover="showExp1()" onmouseout="hideExp1()"></div>
+                    <div id="exp-text1" class="parcours-element-impair">
+                        <div class="parcours-titre">Urbanisme et aménagement</div>
+                        <div class="parcours-date">2016 à 2019</div>
+                        <div class="parcours-texte">Licence Géographie et aménagement (Lyon) | Master Urbanisme et aménagement - Design Urbain (Grenoble)</div>
+                    </div>
+                </div>
+
+                <div id="experience2" class="zone-experience">
+                    <div class="zone-image"><img id="exp-image2" class="cercle-parcours" src="/visuels/exp2.png" alt="cercle tarot" onmouseover="showExp2()" onmouseout="hideExp2()"></div>
+                    <div id="exp-text2" class="parcours-element-pair">
+                        <div class="parcours-titre">Chargée de participation citoyenne - Agence Nalisse</div>
+                        <div class="parcours-date">2019 à 2022</div>
+                        <div class="parcours-texte">Répondre aux besoins, trouver des solutions, travailler en équipe, piloter et animer des groupes de travail</div>
+                    </div>
+                </div>
+
+                <div id="experience3" class="zone-experience">
+                    <div class="zone-image"><img id="exp-image3" class="cercle-parcours" src="/visuels/exp3.png" alt="cercle tarot" onmouseover="showExp3()" onmouseout="hideExp3()"></div>
+                    <div id="exp-text3" class="parcours-element-impair">
+                        <div class="parcours-titre">Concepteur.trice développeur.se d'applications</div>
+                        <div class="parcours-date">En cours - janvier à décembre 2023</div>
+                        <div class="parcours-texte">Titre professionnel RNCP niveau 6 / bac+3/+4 | Descodeuses - Paris 20e</div>
+                    </div>
+                </div>
+                
+                <div id="experience4" class="zone-experience">
+                    <div class="zone-image"><img id="exp-image4" class="cercle-parcours" src="/visuels/exp4.png" alt="cercle tarot" onmouseover="showExp4()" onmouseout="hideExp4()"></div>
+                    <div id="exp-text4" class="parcours-element-pair">
+                        <div class="parcours-titre">Stage en développement - conception d'applications à venir</div>
+                        <div class="parcours-date">A partir de septembre 2023</div>
+                        <div class="parcours-texte">Peut-être chez vous ?</div>
+                    </div>
+                </div>
+
+            </div></div>
+
+        </section>
+
+        <section class="section3 slide-in-right">
+            <div class="titre-cadre">Compétences</div>
+
+            <div class="bloc-competences">
+                <div class="soft skills">
+                <div class="sous-titre">
+                    Soft Skills
+                </div>
+                <ul class="liste">
+                    <li>Répondre aux besoins et trouver des solutions</li>
+                    <li>Travailler en équipe</li>
+                    <li>Piloter et animer des groupes de travail</li>
+                    <li>Recueillir et analyser les besoins clients</li>
+                    <li>Prendre en compte les retours d'expériences d'utilisateurs</li>
+                    <li>Rédiger des synthèses et comptes-rendus</li>
+                </ul>
+                </div>
+
+                <div class="hard skills">
+                    <div class="sous-titre">
+                        Hard Skills
+                    </div>
+                <ul class="liste">
+                    <li>Programmation : HTML5 | CSS3 | JavaScript (Node.js) | Python (Django)</li>
+                    <li>Bases de données : MySQL | MongoDB</li>
+                    <li>Logiciels : QGis, Inkscape, Illustrator, inDesign, Figma, Wordpress</li>
+                    <li>Langues : français (langue maternelle) | anglais (courant)</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="section4">
+            <div class="titre-sanscadre">Portfolio</div>
+
+            <div class="carousel">
+            <div class="swiper mySwiper container">
+                <div class="swiper-wrapper content contenu">
+          
+                  <div class="swiper-slide card">
+                    <div class="card-cache tarot">
+                        <img class="recto-tarot" id="carte-one" src="/visuels/portfolio1.png" alt="carte tarot">
+                    </div>
+
+                    <div class="card-content tarot">
+                      <div class="projet-image">
+                        <img src="/visuels/lapalo.png" alt="Site web La puce à l'oreille" class="card-img">
+                      </div>
+          
+                      <div class="contenu-carte">
+                        <span class="projet-titre">La Puce à l'Oreille</span>
+                        <span class="projet-texte">Site web développé en Wordpress : site vitrine pour La Puce à l'Oreille, formatrice égalité des genres - décembre 2022</span>
+                      </div>
+                    
+                      <div class="projet-bouton">
+                        <button class="about"><a href="https://lapalo-egalite.fr/" target="_blank">En voir plus</a></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide card">
+                    <div class="card-cache tarot">
+                        <img class="recto-tarot" id="carte-two" src="/visuels/portfolio2.png" alt="carte tarot">
+                    </div>
+                    
+                    <div class="card-content tarot">
+                      <div class="projet-image">
+                        <img src="/visuels/greenplanet.png" alt="Site web GreenPlanet" class="card-img">
+                      </div>
+          
+                      <div class="contenu-carte">
+                        <span class="projet-titre">Green Planet</span>
+                        <span class="projet-texte">Projet de groupe 1 (Descodeuses) : site en HTML/CSS à partir d'un client fictif - février 2023</span>
+                      </div>
+                    
+                      <div class="projet-bouton">
+                        <button class="about"><a href="https://heloise-doignies.github.io/Green-Planet/index.html" target="_blank">En voir plus</a></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide card">
+                    <div class="card-cache tarot">
+                        <img class="recto-tarot" id="carte-three" src="/visuels/portfolio3.png" alt="carte tarot">
+                    </div>
+
+                    <div class="card-content tarot">
+                      <div class="projet-image">
+                        <img src="/visuels/bloomintwo.png" alt="Visuel Chatbot" class="card-img">
+                      </div>
+          
+                      <div class="contenu-carte">
+                        <span class="projet-titre">Chatbot - Bloom in Two</span>
+                        <span class="projet-texte">Projet de groupe 2 (Descodeuses) : chatbot en Python/Django sur un site développé par un précédent groupe - mars 2023</span>
+                      </div>
+                    
+                      <div class="projet-bouton">
+                        <button class="about"><a href="https://github.com/lylylou-2/Projet2" target="_blank">En voir plus</a></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide card">
+                    <div class="card-cache tarot">
+                        <img class="recto-tarot" id="carte-four" src="/visuels/portfolio4.png" alt="carte tarot">
+                    </div>
+
+                    <div class="card-content tarot">
+                      <div class="projet-image">
+                        <img src="/visuels/greenplanetmap.PNG" alt="Projet Map interactive Green Planet" class="card-img">
+                      </div>
+          
+                      <div class="contenu-carte">
+                        <span class="projet-titre">Carte interactive - Green Planet</span>
+                        <span class="projet-texte">Projet de groupe 3 (Descodeuses) : map interactive en Javascript sur un site développé par un précédent groupe - mai 2023</span>
+                      </div>
+                    
+                      <div class="projet-bouton">
+                        <button class="about"><a href="https://github.com/Sannavladi/Green-Planet-Carte-Demoday" target="_blank">En voir plus</a></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide card">
+                    <div class="card-cache tarot">
+                        <img class="recto-tarot" id="carte-five" src="/visuels/portfolio6.png" alt="carte tarot">
+                    </div>
+
+                    <div class="card-content tarot">
+                      <div class="projet-image">
+                        <img src="/visuels/popopod.png" alt="Les oreilles en balade" class="card-img">
+                      </div>
+          
+                      <div class="contenu-carte">
+                        <span class="projet-titre">Les oreilles en balade</span>
+                        <span class="projet-texte">Maquette - projet personnel d'application recensant des podcasts touristiques</span>
+                      </div>
+                    
+                      <div class="projet-bouton">
+                        <button class="about">Projet en cours</button>
+                      </div>
+                    </div>
+                  </div>
+          
+                </div>
+              </div>
+          
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            
+            </div>
+
+        </section>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+
+</html>
+
+
+
+
+
+
+<!-- 
+<div id="carrousel">
+        
+    <div class="container one">
+        <div class="zone">
+            <img class="recto-tarot" id="carte-one" src="/visuels/main.png" alt="carte tarot">
+        </div>
+        <div class="zone verso-tarot">
+            <div class="projet-titre">La Puce à l'Oreille</div>
+            <div class="projet-image"><img src="/visuels/lapalo.png" alt="visuel projet"></div>
+            <div class="projet-texte">Site web développé en Wordpress : site vitrine pour La Puce à l'Oreille, formatrice égalité des genres - décembre 2022</div>
+            <div class="projet-bouton"><a href="https://lapalo-egalite.fr/" target="_blank">En voir plus</a></div>
+        </div>
+    </div>
+
+    <div class="container two">
+        <div class="zone">
+            <img class="recto-tarot" id="carte-one" src="/visuels/oeil.png" alt="carte tarot">
+        </div>
+        <div class="zone verso-tarot">
+            <div class="projet-titre">Green Planet</div>
+            <div class="projet-image"><img src="/visuels/greenplanet.png" alt="visuel projet"></div>
+            <div class="projet-texte">Projet de groupe (Descodeuses) : site en HTML/CSS à partir d'un client fictif - février 2023</div>
+            <div class="projet-bouton"><a href="https://heloise-doignies.github.io/Green-Planet/index.html" target="_blank">En voir plus</a></div>
+        </div>
+    </div>
+
+    <div class="container three">
+        <div class="zone">
+            <img class="recto-tarot" id="carte-one" src="/visuels/main2.png" alt="carte tarot">
+        </div>
+        <div class="zone verso-tarot">
+            <div class="projet-titre">Chatbot Bloom in Two</div>
+            <div class="projet-image"><img src="/visuels/bloomintwo.png" alt="visuel projet"></div>
+            <div class="projet-texte">Projet de groupe (Descodeuses) : chatbot en Python/Django sur un site développé par un précédent groupe - mars 2023</div>
+            <div class="projet-bouton"><a href="https://github.com/lylylou-2/Projet2" target="_blank">En voir plus</a></div>
+        </div>
+    </div>
+    </div>
+    
+</div> fermeture carrousel -->

@@ -1,0 +1,656 @@
+$primary:#F7EDE2;
+$dark: #1a1d22;
+$light: #F6BD60;
+$violet: #646180;
+
+$police1:'Cinzel', serif;
+$police2:'Playfair Display', serif;
+$police3:'Qwitcher Grypen', cursive;
+
+
+html {
+    overflow: auto;
+}
+
+body {
+    padding:0;
+    margin:auto;
+    // margin-bottom:30px;
+    background-image: url("/visuels/ep_naturalblack.webp"); 
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+* {
+    color:$primary;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: $dark;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgba(247, 237, 226, 0.3);
+    
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+/*_________________________________CODE HEADER_________________________________*/
+
+header {
+    margin:80px auto;
+}
+
+#texte-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom:30px;
+}
+
+.identite {
+    text-shadow: 0px 3px 3px $light;
+}
+
+.prenom {
+    font-family: $police1;
+    font-size: 2rem;
+    margin-left:85px;
+}
+
+.nom {
+    font-family:$police3;
+    font-size: 6rem;
+    margin-top:-55px;
+}
+
+.metier {
+    font-family: $police1;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+}
+
+#image-boule {
+    height:80px;
+}
+
+
+/*_________________________________CODE SECTIONS_________________________________*/
+
+.section1, .section3 {
+    background-color: $dark;
+    box-shadow: 5px 7px 15px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width:80%;
+    margin:auto;
+    padding:30px;
+    background-image: url(/visuels/cadre.png);
+    background-size: 95% 90%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.section2, .section4 {
+    margin:80px auto;
+}
+
+.titre-cadre, .titre-sanscadre {
+    font-family: $police1;
+    text-align: center;
+    font-size: 1.8rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    margin:30px 0;
+}
+
+.titre-cadre::before, .titre-sanscadre::before {
+    content: "";
+    width: 10%;
+    height: 2px;
+    background: $primary;
+}
+
+.titre-cadre::after, .titre-sanscadre::after {
+    content: "";
+    width: 10%;
+    height: 2px;
+    background: $primary;
+}
+
+.sous-titre {
+    font-family: $police1;
+    text-align: center;
+    font-size: 1.2rem;
+    margin:10px 0;
+}
+
+
+/*__________________________CODE SECTION 1 QUI SUIS-JE ?__________________________*/
+
+
+.section1 {
+    display: flex;
+}
+
+.bloc-presentation {
+    padding:20px;
+    font-family:$police2;
+    font-size: 0.9rem;
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.presentation {
+    padding:10px 10px;
+    text-align: justify;
+}
+
+.cartes {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap:10px;
+    text-align: center;
+    width: 45%;
+    padding:20px;
+}
+
+.recto-qui1, .recto-qui2 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.recto-qui1 {
+    background-image: url(/visuels/empress.png);
+}
+.recto-qui2 {
+    background-image: url(/visuels/world.png);
+}
+
+
+/* Code pour la transition des cartes en contenu projet */
+
+.carte{
+    position: relative;
+    width: 100%;   
+    cursor: pointer;
+}
+
+.carte1 {
+    transform: rotate(-6deg);
+}
+
+.carte2 {
+    transform: rotate(6deg);
+}
+
+.carte .zone-qui{
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 2s;
+
+    border-radius:20px;
+    width:100%;
+    height:100%; 
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.verso-qui1 {
+    background-color: $primary;
+}
+
+.verso-qui2 {
+    background-color: $light;
+}
+
+.carte .zone-qui:nth-of-type(1){
+    transform: perspective(2000px) rotateY(0deg);   
+}
+.carte .zone-qui:nth-of-type(2){
+    transform: perspective(1000px) rotateY(-180deg);
+}
+.carte:hover .zone-qui:nth-of-type(1){
+    transform: perspective(1000px) rotateY(180deg);   
+}
+.carte:hover .zone-qui:nth-of-type(2){
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+/* Fin du code pour la transition des cartes en contenu */
+
+
+.section1 .sous-titre, .section1 .texte, .fa-brands {
+    color:$dark;
+}
+
+.section1 .texte{    
+    font-family:$police2;
+    font-size: 0.8rem;
+}
+
+.photo img {
+    width:80%;
+}
+
+.section1 .mail {
+    text-decoration: underline;
+}
+
+.fa-brands {
+    font-size: 1.2rem;
+    color: $violet;
+    padding:0 5px;
+}
+
+.fa-brands:hover {
+    font-size:1.3rem;
+    color:$light;
+    transition: all 500ms ease;
+}
+
+.qui-bouton {
+    background-color: $violet;
+    font-family: $police1;
+    font-size: 0.7rem;
+    color:$primary;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 80%;
+    margin:20px auto 0 auto;
+    padding:3px;
+}
+
+.qui-bouton:hover{
+    background-color: $light;
+    color:$dark;
+}
+
+
+/*___________________________CODE SECTION 2 EXPERIENCES___________________________*/
+
+.parcours {
+    display: flex;
+    flex-direction: row; 
+    width:80vw;
+    gap:20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#ligne {
+    width: 100%;
+    background-image: url("/visuels/line.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top:30px;
+} 
+
+.cercle-parcours {
+    border:$primary 2px solid;
+    border-radius: 100%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: $dark;
+    width:100px;
+
+    cursor:pointer;
+}
+
+.zone-experience {
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+#exp-image1, #exp-image2, #exp-image3, #exp-image4 {
+    opacity: 1;
+    transition: all 500ms ease;
+    position:relative;
+    display:flex;
+}
+
+#exp-text1, #exp-text2, #exp-text3, #exp-text4 {
+    position: absolute;
+    height: auto;
+    opacity:0;
+    z-index:-1;
+    transition: all 500ms ease;
+}
+
+.parcours-element-impair, .parcours-element-pair {
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding:10px;
+    width:15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:5px;
+}
+
+.parcours-element-impair {
+    background: $primary;
+}
+
+.parcours-element-pair {
+    background: $light;
+}
+
+.parcours-titre, .parcours-date, .parcours-texte {
+    color:$dark;
+}
+
+.parcours-titre {
+    font-family: $police1;
+    font-size: 0.9rem;
+}
+
+.parcours-date {
+    font-family:$police1;
+    font-size: 0.6rem;
+}
+
+.parcours-texte {
+    font-family:$police2;
+    font-size: 0.8rem;
+}
+
+
+/*___________________________CODE SECTION 3 COMPETENCES___________________________*/
+
+.bloc-competences {
+    display:flex;
+    justify-content: center;
+    padding:50px;
+    padding:20px 0;
+}
+
+.section3 li {
+    font-family:$police2;
+    font-size: 0.9rem;
+    /* list-style-image: url(/visuels/puce-demi-lune.png); */
+}
+
+.skills {
+    width:50%;
+    list-style-position: inside;
+    text-align: center;
+}
+
+.section3 .sous-titre {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+}
+
+.deco-competences {
+    height:50px;
+}
+
+
+
+
+/*_______________________________CODE SECTION 4 PORTFOLIO___________________________*/
+
+
+.carousel{
+    position: relative; 
+    display: flex;
+    align-items: center;
+    margin:auto;
+  }
+  
+.swiper{
+    width: 90%;
+  }
+  
+.card{
+    position: relative;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    height:50%;
+  }
+    
+.card .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $primary;
+    border-radius: 20px;
+    margin: 10px;
+    height:auto;
+  }
+
+
+//Début code transition cartes de tarot
+.contenu {
+    min-height:70vh;
+}
+
+.tarot{
+    position: absolute;
+    top: 0;  
+    left: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: 2s;
+  }
+
+.card .tarot:nth-of-type(1){
+    transform: perspective(2000px) rotateY(0deg);   
+  }
+.card .tarot:nth-of-type(2){
+    transform: perspective(1000px) rotateY(-180deg);
+  }
+.card:hover .tarot:nth-of-type(1){
+    transform: perspective(1000px) rotateY(180deg); 
+  }
+.card:hover .tarot:nth-of-type(2){
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+//Fin code transition cartes de tarot
+    
+  .section4 .card img{
+    width: 90%;
+    margin:5%;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+  
+  .card .contenu-carte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:10px;
+  } 
+  
+  .contenu-carte .projet-titre{
+    font-family:$police1;
+    font-size:1rem;
+    color:$dark;
+    text-align: center;
+  }
+  
+  .contenu-carte .projet-texte{
+    font-family:$police2;
+    font-size:0.8rem;
+    color:$dark;
+  }
+    
+  .card .projet-bouton button{
+    background: $light;
+    font-family: $police1;
+    border: none;
+    color: $dark;
+    padding: 3px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom:5px;
+  }
+  
+  .projet-bouton button:hover{
+    background: $violet;
+    color:$primary;
+  }
+    
+  .swiper-button-next, .swiper-button-prev{
+    opacity: 0.5;
+    color: $light;
+    transition: all 0.3s ease;
+  }
+  .swiper-button-next:hover, .swiper-button-prev:hover{
+    opacity: 1;
+    color: $light;
+  }
+  
+
+
+
+/*____________________________CODE RESPONSIVE_______________________*/
+
+@media screen and (max-width: 768px) {
+   
+    /*________CODE HEADER_________*/
+    
+    #texte-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:10px;
+        margin:10px;
+    }
+    
+    .identite {
+        margin-top:0px;
+    }
+    
+    .metier {
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .section1, .section3 {
+        border-radius: 5px;
+        padding: 20px;
+        background-size: 100% 100%;
+    }
+    
+    /*_______CODE SECTION 1 QUI SUIS-JE ?______*/
+    .section1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloc-presentation {
+        padding: 10px; 
+        width:100%;
+    }
+
+    .cartes {
+        height:50vh;
+        width:90%
+    }
+
+    .carte {
+        height:100%;
+        
+    }
+
+    #carte1-contenu .texte {
+        font-size: 0.5rem;
+    }
+    
+    /*_______CODE SECTION 2 EXPERIENCES_______*/
+    .parcours {
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+    }
+
+    #ligne {
+        background-image: url("/visuels/line-responsive.png");
+        background-position: 50%;
+    } 
+
+    .parcours-element-impair, .parcours-element-pair {
+        width:70vw;
+    }
+
+
+
+
+    /*______CODE SECTION 3 COMPETENCES_______*/
+    .bloc-competences {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:10px;
+        padding-top:5px;
+    }
+
+    .bloc-competences ul {
+        padding-left:10px;
+    }
+
+    .skills {
+        width:100%;
+    }
+
+    /*______CODE SECTION 4 PORTFOLIO_______*/
+
+    .contenu {
+        min-height:80vh;
+         }
+
+  }
+
+
+  @media screen and (max-width: 576px) { 
+    .swiper{
+        width: 80%;
+      }
+
+    .contenu {
+     min-height:100vh;
+      }
+  }
+
+
+
+
+
+
+
+
+
