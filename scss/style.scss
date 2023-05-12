@@ -16,8 +16,7 @@ body {
     padding:0;
     margin:auto;
     // margin-bottom:30px;
-    background-image: url("./visuels/ep_naturalblack.webp"); 
-    background-color: $dark;
+    background-image: url("/visuels/ep_naturalblack.webp"); 
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -182,10 +181,10 @@ header {
 }
 
 .recto-qui1 {
-    background-image: url(./visuels/empress.png);
+    background-image: url("/visuels/empress.png");
 }
 .recto-qui2 {
-    background-image: url(./visuels/world.png);
+    background-image: url("/visuels/world.png");
 }
 
 
