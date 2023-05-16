@@ -79,9 +79,10 @@ header {
 
 .metier {
     font-family: $police1;
-    font-size: 1rem;
+    font-size: 1.3rem;
     display: flex;
     flex-direction: row;
+    text-align:center;
     gap:5px;
 }
 
@@ -385,14 +386,17 @@ header {
 .bloc-competences {
     display:flex;
     justify-content: center;
-    padding:50px;
-    padding:20px 0;
+
 }
 
 .section3 li {
     font-family:$police2;
     font-size: 0.9rem;
     /* list-style-image: url(/visuels/puce-demi-lune.png); */
+}
+
+.section3 ul {
+    padding:0 20px;
 }
 
 .skills {
