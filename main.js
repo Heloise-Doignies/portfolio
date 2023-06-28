@@ -83,3 +83,25 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
   
+
+  /* ______Code pour animation au scroll_____ */
+  document.addEventListener('DOMContentLoaded', function() {
+    var sections = document.querySelectorAll('.section');
+  
+    function animateSections() {
+      for (var i = 0; i < sections.length; i++) {
+        var section = sections[i];
+        var sectionTop = section.getBoundingClientRect().top;
+  
+        if (sectionTop - window.innerHeight + 100 < 0) {
+          section.classList.add('section--visible');
+        } else {
+          section.classList.remove('section--visible');
+        }
+      }
+    }
+  
+    animateSections();
+    window.addEventListener('scroll', animateSections);
+  });
+  
